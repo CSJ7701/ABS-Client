@@ -178,6 +178,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libmpv-dev python3-pyqt6 imagemagick
           poetry install
+      - name: Install FUSE
+        run: |
+          sudo apt-get install -y libfuse2
       - name: Build AppImage
         run: |
           # Build binary with PyInstaller
