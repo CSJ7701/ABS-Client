@@ -85,7 +85,7 @@ jobs:
           poetry install
       - name: Build executable
         run: |
-          poetry run pyinstaller --onefile --windowed --name=abs-player --add-data "styles;styles" app/App.py
+          poetry run pyinstaller --onefile --windowed --name=abs-player --add-data "styles;styles" --hidden-import=PyQt6 app/App.py
       - name: Create Windows Installer
         run: |
           # Install Inno Setup (silent install)
