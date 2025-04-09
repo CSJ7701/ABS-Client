@@ -1,0 +1,76 @@
+/* Material Light Theme with Sage Green Accents for Login Screen */
+
+/* Global styles */
+* {
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    color: #212121;
+}
+
+QWidget {
+    background-color: #FAFAFA;
+}
+
+/* Login form elements */
+QLabel {
+    font-size: 24px;
+    font-weight: bold;
+    color: #424242;
+    margin-bottom: 24px;
+}
+
+QLineEdit {
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #799F7D;  /* Sage green */
+}
+
+QPushButton {
+    background-color: #799F7D;  /* Sage green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: #8FAB91;  /* Lighter sage green */
+}
+
+QPushButton:pressed {
+    background-color: #5E7A60;  /* Darker sage green */
+}
+
+QPushButton:disabled {
+    background-color: #BDBDBD;  /* Gray when disabled */
+    color: #757575;
+}
+
+/* Message box styling */
+QMessageBox {
+    background-color: #FFFFFF;
+}
+
+QMessageBox QLabel {
+    font-size: 14px;
+    color: #212121;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    min-height: 32px;
+}
+
+/* Add a nice subtle shadow to the login container */
+#loginContainer {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}

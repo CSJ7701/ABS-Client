@@ -1,0 +1,72 @@
+QWidget#bookScreen {
+    background-color: #FAFAFA; 
+    padding: 16px;
+}
+QLabel {
+    color: #212121; 
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 13px;
+}
+QLabel#titleLabel {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 8px;
+    color: #212121;
+}
+QLabel#authorLabel {
+    font-size: 16px;
+    color: #757575;
+    margin-bottom: 16px;
+}
+QLabel#statusLabel {
+    font-size: 16px;
+    border-radius: 5px;
+}
+QLabel.warning {
+    color: red;
+}
+QLabel.success {
+    color: #212121;
+}
+
+QTextEdit {
+    background-color: #FFFFFF; 
+    color: #212121; 
+    /*border: 1px solid #E0E0E0;*/
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 14px;
+    selection-background-color: #8FAB91;
+    selection-color: #FFFFFF;
+}
+QPushButton {
+    background-color: #799F7D; 
+    color: #FFFFFF; 
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+}
+QPushButton:hover {
+    background-color: #8FAB91; 
+}
+QPushButton:pressed {
+    background-color: #5E7A60; 
+}
+#coverFrame {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #E0E0E0;
+}
+
+#contentFrame {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 0px;
+}

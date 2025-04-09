@@ -1,0 +1,190 @@
+
+* {
+    font-family: "Segoe UI", "Roboto", sans-serif;
+    color: #212121;
+}
+
+QWidget {
+    background-color: #FAFAFA;
+}
+
+/* Top Bar */
+QComboBox {
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #FFFFFF;
+    min-height: 24px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 20px;
+    border-left: none;
+}
+
+QComboBox::down-arrow {
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #E0E0E0;
+    selection-background-color: #8FAB91;
+    selection-color: #FFFFFF;
+    background-color: #FFFFFF;
+    padding: 4px;
+}
+
+QComboBox QListView {
+    border: none;
+    background-color: #FFFFFF;
+}
+
+QComboBox QListView::item {
+    min-height: 24px;
+    padding: 4px 8px;
+}
+
+QListView::item:selected {
+    background-color: #8FAB91;
+    color: #FFFFFF;
+}
+
+QListView::item:hover {
+    background-color: #E8F0E9;
+}
+    
+
+QLineEdit {
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #FFFFFF;
+    min-height: 24px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #799F7D;
+}
+
+QPushButton {
+    background-color: #799F7D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-height: 36px;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: #8FAB91;
+}
+
+QPushButton:pressed {
+    background-color: #5E7A60;
+}
+
+/* Menu Button */
+QPushButton#menu_button {
+    font-size: 10px;
+    padding: 2px;
+    min-width: 36px;
+    min-height: 36px;
+}
+
+/* Book Grid */
+QFrame.card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    padding: 12px;
+}
+
+QFrame.card:hover {
+    border: 1px solid #799F7D;
+}
+
+QLabel.card_title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #212121;
+    margin-top: 8px;
+}
+
+QLabel.card_author {
+    font-size: 12px;
+    color: #757575;
+}
+
+QLabel.card_cover {
+    border-radius: 4px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+QLabel.progress_label {
+    color: #799F7D;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+#gridContainer {
+    border-radius: 5px;
+    background: transparent
+}
+
+QScrollArea {
+    border: none;
+    background-color: transparent;
+}
+
+QScrollArea QAbstractScrollArea {
+    border-radius: 10px;
+}
+
+QScrollBar:vertical {
+    background: #F5F5F5;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #BDBDBD;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #8FAB91;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Menu Styling */
+QMenu {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 8px 24px 8px 8px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #E8F0E9;
+    color: #212121;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #E0E0E0;
+    margin: 4px 0px;
+}

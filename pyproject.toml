@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "abs-player"
+version = "0.1.0"
+description = "A desktop client for AudiobookShelf servers that allows users to browse and play audiobooks locally using the MPV media player."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [
+	 {include = "app"},
+	 {include = "api"}
+	 ]
+include = [
+	"styles/*.qss"
+	]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyqt6 = "^6.8.1"
+httpx = "^0.28.1"
+mpv = "^1.0.7"
+keyring = "^25.6.0"
+
+[tool.poetry.scripts]
+abs-player = "app.App:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
