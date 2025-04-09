@@ -206,7 +206,8 @@ jobs:
           EOF
 
           ls -l AppDir/usr/share/applications/
-          
+          cat AppDir/usr/share/applications/abs-player.desktop
+
           # Create a simple icon (replace with your actual icon)
           convert -size 256x256 xc:white -fill black -draw "circle 128,128 128,64" AppDir/usr/share/icons/hicolor/256x256/apps/abs-player.png
           
