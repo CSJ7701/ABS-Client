@@ -46,9 +46,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install poetry
       - name: Build package
-        run: poetry build --format=wheel --format=sdist
-      - name: List all contents
-        run: ls -al
+        run: poetry build
       - name: List dist contents
         run: ls -al ./dist
       - name: Upload wheel to release
