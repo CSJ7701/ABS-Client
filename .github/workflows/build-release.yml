@@ -11,6 +11,16 @@ jobs:
     outputs:
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create tag if it does not exist
+        run: |
+          if ! git rev-parse -q --verify "refs/tags/${{ github.ref_name }}"; then
+            git tag ${{ github.ref_name }}
+            git push origin ${{ github.ref_name }}
+          fi
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
