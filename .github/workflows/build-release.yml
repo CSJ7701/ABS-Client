@@ -195,7 +195,7 @@ jobs:
           cp dist/abs-player AppDir/usr/bin/
           
           # Create .desktop file
-          cat > AppDir/usr/share/applications/abs-player.desktop <<EOF
+          cat <<EOF > AppDir/usr/share/applications/abs-player.desktop
           [Desktop Entry]
           Type=Application
           Name=AudiobookShelf Player
