@@ -195,7 +195,7 @@ jobs:
           cp dist/abs-player AppDir/usr/bin/
           
           # Create .desktop file
-          cat > AppDir/usr/share/applications/abs-player.desktop << EOF
+          cat > AppDir/usr/share/applications/abs-player.desktop <<EOF
           [Desktop Entry]
           Type=Application
           Name=AudiobookShelf Player
@@ -213,6 +213,8 @@ jobs:
           # Download and use appimagetool
           wget -c https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
           chmod +x appimagetool-x86_64.AppImage
+          find AppDir/
+          file AppDir/usr/share/applications/abs-player.desktop
           ./appimagetool-x86_64.AppImage AppDir AudiobookShelf-Player.AppImage
       - name: Upload Linux AppImage
         uses: actions/upload-release-asset@v1
