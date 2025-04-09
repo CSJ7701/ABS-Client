@@ -47,8 +47,6 @@ jobs:
           python -m pip install poetry
       - name: Build package
         run: poetry build
-      - name: List dist contents
-        run: ls -al ./dist
       - name: Upload wheel to release
         uses: actions/upload-release-asset@v1
         env:
@@ -178,7 +176,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install poetry pyinstaller
           sudo apt-get update
-          sudo apt-get install -y libmpv-dev python3-pyqt6
+          sudo apt-get install -y libmpv-dev python3-pyqt6 imagemagick
           poetry install
       - name: Build AppImage
         run: |
