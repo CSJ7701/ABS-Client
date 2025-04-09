@@ -47,8 +47,10 @@ jobs:
           python -m pip install poetry
       - name: Build package
         run: poetry build --format=wheel --format=sdist
+      - name: List all contents
+        run: ls -al
       - name: List dist contents
-        run: ls -l ./dist
+        run: ls -al ./dist
       - name: Upload wheel to release
         uses: actions/upload-release-asset@v1
         env:
