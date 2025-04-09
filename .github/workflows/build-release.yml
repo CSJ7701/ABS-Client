@@ -17,8 +17,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
           draft: false
           prerelease: false
 
@@ -52,8 +52,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: ./dist/abs-player-0.1.0.tar.gz
-          asset_name: abs-player-0.1.0.tar.gz
+          asset_path: ./dist/*.tar.gz
+          asset_name: abs-player.tar.gz
           asset_content_type: application/gzip
 
   build-windows:
@@ -65,6 +65,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
+      - name: Upgrade dependencies
+        run: |
+          python -m pip install --upgrade pip pyinstaller rapidfuzz
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -72,7 +75,7 @@ jobs:
           poetry install
       - name: Build executable
         run: |
-          poetry run pyinstaller --onefile --windowed --name=abs-player --add-data "app/styles;app/styles" app/App.py
+          poetry run pyinstaller --onefile --windowed --name=abs-player --add-data "styles;styles" app/App.py
       - name: Create Windows Installer
         run: |
           # Install Inno Setup (silent install)
@@ -128,7 +131,7 @@ jobs:
           brew install create-dmg
       - name: Build .app bundle
         run: |
-          poetry run pyinstaller --onefile --windowed --name="AudiobookShelf Player" --add-data "app/styles:app/styles" app/App.py
+          poetry run pyinstaller --onefile --windowed --name="AudiobookShelf Player" --add-data "styles:styles" app/App.py
       - name: Create DMG
         run: |
           create-dmg \
@@ -168,7 +171,7 @@ jobs:
       - name: Build AppImage
         run: |
           # Build binary with PyInstaller
-          poetry run pyinstaller --onefile --name=abs-player --add-data "app/styles:app/styles" app/App.py
+          poetry run pyinstaller --onefile --name=abs-player --add-data "styles:styles" app/App.py
           
           # Create AppDir structure
           mkdir -p AppDir/usr/bin

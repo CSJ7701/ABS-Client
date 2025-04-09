@@ -2,8 +2,9 @@
 name = "abs-player"
 version = "0.1.0"
 description = "A desktop client for AudiobookShelf servers that allows users to browse and play audiobooks locally using the MPV media player."
-authors = ["Your Name <you@example.com>"]
+authors = ["Christian Johnson <c.ship.johnson@gmail.com>"]
 readme = "README.md"
+license = "GPL3"
 packages = [
 	 {include = "app"},
 	 {include = "api"}
